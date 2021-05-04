@@ -1,0 +1,357 @@
+//            Links
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Dancing+Script&family=Oswald&display=swap');
+
+//           Variables
+$primary-color: rgb(216, 166, 174);
+$secondary-color: rgb(231, 196, 149);
+$hover-over: darkblue;
+$text: rgb(122, 38, 122);
+$secondary-text: gray;
+
+//         Configuration
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+//--------------Body----------------------------
+body {
+	// background-image: url(../img/BATB-logo.jpg);
+	// background-repeat: no-repeat;
+	// background-position: center center;
+	// background-attachment: fixed;
+	// background-size: cover;
+	overflow-x: hidden;
+
+	a {
+		text-decoration: none;
+		color: $text;
+
+		&:hover {
+			color: $hover-over;
+			text-decoration: none;
+		}
+	}
+
+	//            Header
+	.header {
+		height: 60vw;
+		max-height: 200px;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+
+		h1 {
+			font-family: 'Dancing Script', cursive;
+			font-size: 13vw;
+			font-weight: bolder;
+			text-shadow: 2px 2px 5px black;
+			background-color: rgba(white, 0.6);
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100vw;
+			height: inherit;
+			max-height: 200px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 1;
+			color: $text;
+			margin: 0px;
+			padding: 1rem;
+		}
+
+		.video-container {
+			background-position: center;
+			width: 100%;
+			height: auto;
+			overflow-y: hidden;
+		}
+
+		//     Image Carousal
+		// section#carousel > figure > img {
+		// 	display: none;
+		// 	margin: 0;
+		// }
+
+		// figure {
+		// 	margin: 0px;
+		// }
+
+		// section#carousel > figure.visible > img {
+		// 	display: block;
+		// 	position: relative;
+		// 	overflow: hidden;
+		// 	height: auto;
+		// 	width: 100vw;
+		// 	margin: 0px;
+		// 	padding: 0px;
+		// }
+	}
+
+	//          Navigation
+	.navbar {
+		background-color: $secondary-color;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		box-shadow: 0px 10px 15px $text;
+
+		&-nav {
+			text-align: center;
+			font-weight: bolder;
+			font-family: 'Comfortaa', cursive;
+			color: $text;
+			justify-content: center;
+			align-items: center;
+
+			.nav-item {
+				.nav-link {
+					margin-left: 1rem;
+
+					&:hover {
+						color: $hover-over;
+					}
+				}
+			}
+		}
+	}
+
+	//           Content
+	.page-content-container {
+		position: relative;
+		min-height: 110vh;
+		max-height: fit-content;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			left: 0px;
+			bottom: 0px;
+			background-color: $primary-color;
+			opacity: 0.7;
+		}
+
+		.covid-alert-container {
+			position: relative;
+			width: 100vw;
+			background-color: rgb(179, 0, 0);
+			padding: 0.5rem 1rem;
+
+			h3 {
+				text-align: center;
+				font-size: 15px;
+				margin: 0px;
+			}
+		}
+
+		img {
+			width: 150px;
+			height: 150px;
+			border: 3px solid $text;
+			border-radius: 50%;
+		}
+
+		.content-header-container {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin-top: 2rem;
+
+			h1 {
+				position: relative;
+				font-size: 4rem;
+				text-align: center;
+				color: $text;
+				text-shadow: 2px 4px 2px black;
+				font-family: 'Rouge Script', cursive;
+				margin-left: 1rem;
+			}
+		}
+
+		.content-container {
+			position: relative;
+			text-align: center;
+			padding: 1rem;
+			margin: 2rem;
+			width: 90vw;
+			max-width: 500px;
+			background-color: rgba(white, 0.6);
+			border-radius: 10px;
+
+			p {
+				font-family: 'Oswald', sans-serif;
+				font-size: 1.5rem;
+				font-weight: bold;
+			}
+
+			h3 {
+				text-align: center;
+				color: $text;
+				font-family: 'Dancing Script', cursive;
+				font-weight: bolder;
+				font-size: 15vw;
+			}
+		}
+
+		.image-container {
+			position: relative;
+			display: grid;
+			grid-template-columns: repeat(1, 1fr);
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 2rem;
+
+			.gallery {
+				width: 70vw;
+				height: auto;
+				margin: 1rem;
+				border: 3px solid $text;
+				border-radius: 10px;
+				box-shadow: 5px 5px 10px $text;
+			}
+		}
+
+		h1 {
+			position: relative;
+			font-size: 5rem;
+			text-align: center;
+			color: white;
+		}
+
+		h3 {
+			position: relative;
+			font-size: 2rem;
+			text-align: center;
+			color: white;
+		}
+	}
+	//            Footer
+	.footer-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: fit-content;
+		background-color: $primary-color;
+		text-align: center;
+		padding: 0.5rem;
+		box-shadow: 0px -10px 15px $text;
+		padding-bottom: 6rem;
+
+		.phone-icon {
+			position: fixed;
+			left: 1rem;
+			bottom: 1rem;
+			background-color: $primary-color;
+			padding: 1rem;
+			border-radius: 50%;
+			border: 3px solid $text;
+
+			&:hover {
+				border: 3px solid $hover-over;
+			}
+		}
+
+		.arrow-icon {
+			position: fixed;
+			right: 1rem;
+			bottom: 1rem;
+			background-color: $primary-color;
+			padding: 1rem 1.2rem;
+			border-radius: 50%;
+			border: 3px solid $text;
+
+			&:hover {
+				border: 3px solid $hover-over;
+			}
+		}
+
+		.social-icon-container {
+			width: 80vw;
+			max-width: 300px;
+			display: flex;
+			justify-content: space-evenly;
+		}
+
+		p {
+			margin: 0;
+		}
+	}
+	//         Media Queries
+	@media screen and (min-width: 426px) {
+		.header {
+			h1 {
+				font-size: 14vw;
+			}
+		}
+
+		.page-content-container {
+			.content-header-container {
+				flex-direction: row;
+				justify-content: space-evenly;
+				width: 60vw;
+				max-width: 400px;
+
+				h1 {
+					font-size: 7rem;
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: 768px) {
+		.header {
+			h1 {
+				font-size: 10vw;
+			}
+		}
+
+		.page-content-container {
+			.content-header-container {
+				img {
+					width: 200px;
+					height: 200px;
+				}
+			}
+
+			.image-container {
+				grid-template-columns: repeat(2, 1fr);
+
+				img {
+					width: 40vw;
+					height: auto;
+				}
+			}
+		}
+
+		.footer-container {
+			padding-bottom: 2rem;
+		}
+	}
+
+	@media screen and (min-width: 1080px) {
+		.page-content-container {
+			.image-container {
+				grid-template-columns: repeat(5, 1fr);
+
+				img {
+					width: 15vw;
+					height: auto;
+				}
+			}
+		}
+	}
+}
